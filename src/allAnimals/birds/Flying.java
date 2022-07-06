@@ -1,4 +1,4 @@
 public interface Flying {
-    public static void Fly() {
+    public static void fly() {
     }
 }

@@ -1,3 +1,5 @@
+package allAnimals.birds;
+
 public abstract class Animals {
 
 
@@ -38,19 +40,19 @@ public abstract class Animals {
         this.color = color;
     }
 
-    protected void Say(){
+    public void say(){
         System.out.println("Я говорю");
     }
 
-    protected void Go(){
+    public void go(){
         System.out.println("Я иду");
     }
 
-    protected void Drink(){
+    public void drink(){
         System.out.println("Я пью");
     }
 
-    protected void Eat(){
+    public void eat(){
         System.out.println("Я ем");
     }
 
