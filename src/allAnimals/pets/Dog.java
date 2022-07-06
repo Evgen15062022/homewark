@@ -1,4 +1,6 @@
-import allAnimals.birds.Animals;
+package allAnimals.pets;
+
+import allAnimals.Animals;
 
 public class Dog extends Animals {
 

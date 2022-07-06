@@ -1,4 +1,4 @@
-package allAnimals.birds;
+package allAnimals;
 
 public abstract class Animals {
 
@@ -58,12 +58,22 @@ public abstract class Animals {
 
     public String toString (){
 
-    if (age == 1 || age == 2 || age == 3 || age == 4){
-        return "Привет! Меня зовут " + name + ", мне " + age +
-                " года, я вешу - " + weight + " кг, мой цвет - " + color;}
-    else {return "Привет! Меня зовут " + name + ", мне " + age + " лет, " +
-            "я вешу - " + weight + " кг, мой цвет - " + color;}
+        // 11 лет (111  и больше не беру, столько не живут)
+        // 1,21,31, - год
+        // 2,3,4,22,23,24 - года
+        // - лет
+        if (age == 11){
+            return "Привет! Меня зовут " + name + ", мне " + age +
+                    " лет, я вешу - " + weight + " кг, мой цвет - " + color;}
+        else if (age == 1 || age % 10 == 1){
+            return "Привет! Меня зовут " + name + ", мне " + age +
+                    " год, я вешу - " + weight + " кг, мой цвет - " + color;}
+        else if (Integer.toString(age).endsWith("2") || Integer.toString(age).endsWith("3") || Integer.toString(age).endsWith("4")){
 
+            return "Привет! Меня зовут " + name + ", мне " + age +
+                    " года, я вешу - " + weight + " кг, мой цвет - " + color;}
+        else {return "Привет! Меня зовут " + name + ", мне " + age + " лет, " +
+                "я вешу - " + weight + " кг, мой цвет - " + color;}
     }
 
 }

@@ -1,3 +1,8 @@
+import allAnimals.Animals;
+import allAnimals.birds.Duck;
+import allAnimals.pets.Cat;
+import allAnimals.pets.Dog;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -20,17 +25,17 @@ public class App {
                         Animals cat = new Cat();
                         createAnimal(cat, sc);
                         animalList.add(cat);
-                        cat.Say();
+                        cat.say();
                     } else if (animalName.equals("dog")) {
                         Animals dog = new Dog();
                         createAnimal(dog, sc);
                         animalList.add(dog);
-                        dog.Say();
+                        dog.say();
                     } else if (animalName.equals("duck")) {
                         Animals duck = new Duck();
                         createAnimal(duck, sc);
                         animalList.add(duck);
-                        duck.Say();
+                        duck.say();
                     }
                     break;
                 case "LIST":
@@ -48,14 +53,22 @@ public class App {
         }
 
     }
-
     public static void createAnimal(Animals animals,Scanner scanner){
         System.out.println("Введите имя животного");
         animals.setName(scanner.next());
+
         System.out.println("Введите возвраст животного");
+        while(!scanner.hasNextInt()) {
+            System.out.println("Некорректное значение возроста. Пожалуйста, повторите попытку и введите число.");
+            scanner.next();}
         animals.setAge(scanner.nextInt());
+
         System.out.println("Введите вес животного");
-        animals.setWeight(scanner.nextInt());
+        while(!scanner.hasNextInt()){
+            System.out.println("Некорректное значение веса. Пожалуйста, повторите попытку и введите число.");
+            scanner.next();}
+            animals.setWeight(scanner.nextInt());
+
         System.out.println("Введите цвет животного");
         animals.setColor(scanner.next());
     }
