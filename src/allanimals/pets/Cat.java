@@ -1,6 +1,6 @@
-package allAnimals.pets;
+package allanimals.pets;
 
-import allAnimals.Animals;
+import allanimals.Animals;
 
 public class Cat extends Animals {
 

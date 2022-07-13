@@ -1,7 +1,7 @@
-import allAnimals.Animals;
-import allAnimals.birds.Duck;
-import allAnimals.pets.Cat;
-import allAnimals.pets.Dog;
+import allanimals.Animals;
+import allanimals.birds.Duck;
+import allanimals.pets.Cat;
+import allanimals.pets.Dog;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -45,7 +45,7 @@ public class App {
                     break;
                 case "EXIT":
                     System.out.println("Выход из программы");
-                    System.exit(1);
+                    System.exit(0); //0 - штатное завершение
                 default:
                     System.out.println("Неизвестная команда");
 

@@ -1,4 +1,4 @@
-package allAnimals;
+package allanimals;
 
 public abstract class Animals {
 
@@ -68,8 +68,7 @@ public abstract class Animals {
         else if (age == 1 || age % 10 == 1){
             return "Привет! Меня зовут " + name + ", мне " + age +
                     " год, я вешу - " + weight + " кг, мой цвет - " + color;}
-        else if (Integer.toString(age).endsWith("2") || Integer.toString(age).endsWith("3") || Integer.toString(age).endsWith("4")){
-
+        else if (age % 10 == 2 || age % 10 == 3 || age % 10 == 4){
             return "Привет! Меня зовут " + name + ", мне " + age +
                     " года, я вешу - " + weight + " кг, мой цвет - " + color;}
         else {return "Привет! Меня зовут " + name + ", мне " + age + " лет, " +
